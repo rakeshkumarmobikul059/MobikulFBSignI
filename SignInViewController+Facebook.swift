@@ -23,7 +23,7 @@ class MobikulFBSignIn: NSObject{
     func fbLogin(view: UIViewController) {
         
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
-        fbLoginManager.logIn(withReadPermissions: ["public_profile", "email", "user_friends"], from: view) { (result, error) -> Void in
+        fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: view) { (result, error) -> Void in
             if (error == nil){
                 if let fbloginresult : FBSDKLoginManagerLoginResult = (result)
                 {
